@@ -1,0 +1,37 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "just a resume",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyouzu1/resume.git"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-changed-in-place": "^2.3.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.3",
+    "gulp-sass": "^2.0.4",
+    "gulp-sequence": "^1.0.0",
+    "gulp-uglify": "^1.4.2",
+    "node-sass": "^4.9.0"
+  },
+  "author": "razio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyouzu1/resume/issues"
+  },
+  "homepage": "https://github.com/tyouzu1/resume#readme"
+}

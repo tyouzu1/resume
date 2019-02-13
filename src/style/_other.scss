@@ -1,0 +1,41 @@
+.line{
+  &-1 {
+    height: 1px;
+    background-image: linear-gradient(0deg, transparent 50%, $background-green-darker 50%);
+  }
+  &-2 {
+    height: 2px;
+    background-image: linear-gradient(0deg, transparent 25%, $background-green-darker 50%);
+  }
+
+}
+.mt-2 {
+  margin-top: 2px;
+}
+
+.edit-time{
+  font-size: 13px;
+  font-weight: normal;
+  color: $color-primary-light;
+  text-align: right;
+  width: 21cm;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #eee;
+}
+header {
+  height: 20px;
+}
+footer {
+  text-align: center;
+  padding-bottom: 20px;
+  a{
+    color: $color-primary-light;
+  }
+  i{
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+}

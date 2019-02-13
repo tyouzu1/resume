@@ -1,0 +1,45 @@
+@media screen and (max-width: 1024px) {
+  header,footer {
+    display: none;
+  }
+  main {
+    width: 100%;
+    height: 100%;
+  }
+  .edit-time {
+    display: none;
+  }
+  .page {
+    width: auto;
+    height: auto;
+    min-height: auto;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    background: white;
+    box-shadow: none;
+    &-subpage{
+      min-height:auto;
+      max-height:none;
+      display: block;
+    }
+  }
+  .profile {
+    width: 100%;
+    &-concat{
+      width: 70%;
+      margin: 20px auto 0 auto;
+      display: flex;
+      justify-content: space-around;
+      &-item {
+        & > a,& > span {
+          display: none;
+        }
+        .iconfont {
+          margin-right: 0;
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}

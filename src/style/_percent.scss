@@ -1,0 +1,25 @@
+.percent {
+  display: flex;
+  height: 15px;
+  background-color: #00bb9e;
+  border-radius: 50px;
+  overflow: hidden;
+  flex: 2;
+  :first-child {
+    background-color: $color-white;
+  }
+
+  @for $i from 1 through 10
+  {
+      &-#{$i}
+      {
+          flex: $i;
+          height: 100%;
+      }
+  }
+}
+
+
+.mt-2 {
+  margin-top: 2px;
+}

@@ -1,0 +1,51 @@
+.page
+{
+  width: 21cm;
+  min-height: 29.7cm;
+  margin: 1cm auto;
+  border: 1px #D3D3D3 solid;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+  &-subpage{
+      // padding: 1cm;
+      // border: 5px red solid;
+      // height: 256mm;
+    min-height: 29.7cm;
+    max-height: 29.7cm;
+      // outline: 2cm #FFEAEA solid;
+    display: flex;
+    // overflow: hidden;
+  }
+  // &:first-child {
+    // .page-subpage{
+    //   max-height: 29.7cm;
+    // }
+  // }
+}
+
+
+@page
+{
+    size: A4;
+    margin: 0;
+}
+@media print{
+  header,footer,.edit-time {
+    display: none;
+  }
+  .page
+  {
+      margin: 0;
+      border: initial;
+      border-radius: initial;
+      width: initial;
+      min-height: initial;
+      box-shadow: initial;
+      background: initial;
+      // page-break-after: always;
+      page-break-inside:avoid;
+      overflow: hidden;
+  }
+}
