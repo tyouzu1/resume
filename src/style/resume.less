@@ -1,27 +1,36 @@
 .profile, .details{
   // padding: 0.8cm;
+  display: flex;
   overflow: hidden;
   transition: all .2s ease;
+  border: 0.6cm solid;
+  flex-direction: column;
 }
 
 .details{
-  border: 0.8cm solid $background-grey;
-
-  display: flex;
-  flex-direction: column;
-  color: $color-primary;
-  background-color: $background-grey;
-  flex:2;
+  border-color: @background-grey;
+  color: @color-primary;
+  background-color: @background-grey;
+  flex:5;
   background-repeat:no-repeat;
   :not(:first-of-type){
     margin-top: 5px;
   }
+  .mt-2 {
+    margin-top: 2px;
+  }
+  .mt-16 {
+    margin-top: 16px;
+  }
+  b{
+    font-weight: bold;
+  }
   &-content-container {
     margin-top: 5px;
     padding-left: 15px;
-    border-left: 2px solid $color-primary;
+    border-left: 2px solid @color-primary;
     :not(:first-of-type){
-      margin-top: 3px;
+      margin-top: 4px;
     }
     .details-title {
       font-size: 15px;
@@ -31,8 +40,8 @@
   &-section{
     font-size: 15px;
     font-weight: 500;
-    color:  $color-white;
-    background-color: $background-green;
+    color:  @color-white;
+    background-color: @background-green;
     border-radius: 200px;
     text-align: center;
     position: relative;
@@ -46,9 +55,9 @@
       position: absolute;
       top: 50%;
       display: inline-block;
-      width: 190%;
+      width: 400%;
       height: 3px;
-      background-color:  $background-green;
+      background-color:  @background-green;
       transform: scaleY(0.5);
     }
     &::after{
@@ -62,7 +71,7 @@
     font-size: 17px;
     font-weight: bold;
     a{
-      color: $color-green;
+      color: @color-green;
       font-weight: normal;
       font-size: 12px;
     }
@@ -70,7 +79,7 @@
       content: attr(data-time);
       font-size: 13px;
       font-weight: normal;
-      color: $color-green-darker;
+      color: @color-green-darker;
       margin-top: 2px;
       float: right;
     }
@@ -78,7 +87,7 @@
 
   &-text{
     a{
-      color: $color-green;
+      color: @color-green;
       font-weight: normal;
       font-size: 12px;
     }
@@ -87,7 +96,7 @@
       content: "■";
       display: inline-block;
       transform: scale(0.3);
-      color: $color-green;
+      color: @color-green;
     }
 
     &[data-nobefore] {
@@ -97,10 +106,11 @@
         display: none!important;
       }
     }
+    
     // &-icon {
     //   display: inline-block;
     //   transform: scale(0.3);
-    //   color: $color-green;
+    //   color: @color-green;
     // }
 
     // &-important{
@@ -110,7 +120,7 @@
     // &-time{
     //   font-size: 13px;
     //   font-weight: normal;
-    //   color: $color-green-darker;
+    //   color: @color-green-darker;
     // }
 
     .details-content-container {
@@ -120,12 +130,12 @@
       counter-reset: details-text;
       margin-left: 20px;
       padding-left: 10px;
-      border-left: 2px solid $color-primary-light;
+      border-left: 2px solid @color-primary-light;
       .details-text::before {
         content: counter(details-text) " )";
 		    counter-increment: details-text;
         transform: scale(1);
-        color: $color-green;
+        color: @color-green;
         margin-right: 5px;
         letter-spacing: 1px;
       }
@@ -133,32 +143,30 @@
   }
 }
 .profile{
-  border: 0.8cm solid $background-green;
-
+  border-color: @background-green;
   width: 7cm;
-  display: flex;
-  flex-direction: column;
-  flex:1;
-  background-color: $background-green;
+  flex: 2;
+  background-color: @background-green;
   // height: 99.9%;
   background-repeat:no-repeat;
-  color: $color-green-darker;
+  color: @color-green-darker;
   &-user {
     text-align: center;
 
     &-username {
-      color: $color-white;
-      font-size: $font-size-lg;
+      color: @color-white;
+      font-size: @font-size-lg;
       margin-top: 10px;
       margin-bottom: 10px;
     }
     &-job {
-      font-size: $font-size-lg - 10px;
+      font-size: @font-size-lg - 10px;
       margin: 6px auto;
       letter-spacing: 1px;
     }
     &-avatar {
       width: 70%;
+      max-width: 150px;
       border-radius: 50%;
       // height: ;
     }
@@ -166,7 +174,7 @@
   }
   &-skill {
     margin-top: 15px;
-    color: $color-white;
+    color: @color-white;
     &-item {
       margin-top:10px;
       display: flex;
@@ -174,7 +182,7 @@
       justify-content: flex-end;
       &-name {
         margin-right: 8px;
-        flex: 1;
+        flex: 3;
         text-align: right;
         overflow: hidden;
         min-width: 0;
@@ -189,15 +197,15 @@
   }
 
   &-concat {
-    color: $color-white;
+    color: @color-white;
     .iconfont {
-      margin-right: 10px;
+      margin-right: 8px;
     }
     &-item {
       a {
-        color: $color-white;
+        color: @color-white;
         &:visited{
-          color: $color-white;
+          color: @color-white;
         }
       }
       display: flex;

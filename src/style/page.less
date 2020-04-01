@@ -1,7 +1,7 @@
 .page
 {
   width: 21cm;
-  min-height: 29.7cm;
+  min-height: 29.68cm;
   margin: 1cm auto;
   border: 1px #D3D3D3 solid;
   border-radius: 5px;
@@ -12,23 +12,22 @@
       // padding: 1cm;
       // border: 5px red solid;
       // height: 256mm;
-    min-height: 29.7cm;
-    max-height: 29.7cm;
+    min-height: 29.68cm;
+    max-height: 29.68cm;
       // outline: 2cm #FFEAEA solid;
     display: flex;
     // overflow: hidden;
   }
   // &:first-child {
     // .page-subpage{
-    //   max-height: 29.7cm;
+    //   max-height: 29.68cm;
     // }
   // }
 }
 
-
 @page
 {
-    size: A4;
+    size: A4 portrait;
     margin: 0;
 }
 @media print{
@@ -42,10 +41,13 @@
       border-radius: initial;
       width: initial;
       min-height: initial;
-      box-shadow: initial;
-      background: initial;
-      // page-break-after: always;
-      page-break-inside:avoid;
+      box-shadow: none;
+      background: none;
+      border: none;
+      overflow: hidden;
+      page-break-before: always;
+      page-break-after: always;
+      // page-break-inside:avoid;
       overflow: hidden;
   }
 }

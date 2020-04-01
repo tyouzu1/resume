@@ -24,6 +24,11 @@
       display: block;
     }
   }
+  .page2 {
+    .details {
+      border-top: none;
+    }
+  }
   .profile {
     width: 100%;
     &-concat{
@@ -33,7 +38,9 @@
       justify-content: space-around;
       &-item {
         & > a,& > span {
-          display: none;
+          width: 25px;
+          overflow: hidden;
+          line-height: 1;
         }
         .iconfont {
           margin-right: 0;

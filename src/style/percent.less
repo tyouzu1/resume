@@ -1,0 +1,20 @@
+.percent {
+  display: flex;
+  height: 15px;
+  background-color: #00bb9e;
+  border-radius: 50px;
+  overflow: hidden;
+  flex: 5;
+  :first-child {
+    background-color: @color-white;
+  }
+
+  .generate-flex(10);
+  .generate-flex(@n, @i: 1) when (@i =< @n) {
+    &-@{i} {
+      flex: @i;
+      height: 100%;
+    }
+    .generate-flex(@n, (@i+1));
+  } 
+}
