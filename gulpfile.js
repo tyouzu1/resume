@@ -65,9 +65,10 @@ function minifyHtml(){
     return src('src/*.html')
         .pipe(changedInPlace({firstPass: true}))
         .pipe(minifyHTML({collapseWhitespace: true}))
-        .pipe(dest('dist'))
+        .pipe(dest('./'))
         .pipe(browserSync.stream());
 }
+
 
 function clean() {
     return src('dist', {read: false, allowEmpty:true})
@@ -82,7 +83,7 @@ var files = [
 function browserSyncTask(){
     return browserSync.init(files,{
         server: {
-            baseDir: './dist'
+            baseDir: './'
         },
         port: 9999
     });
